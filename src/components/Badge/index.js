@@ -1,7 +1,9 @@
-import React from 'react'
+import BadgeStyle from './styles'
 
-export const Badge = () => {
+export const Badge = ({ children }) => {
   return (
-    <div>index</div>
-  )
-}
+    <BadgeStyle>
+      {children}
+    </BadgeStyle>
+  );
+};

@@ -15,7 +15,6 @@ import produto14 from '../assets/produto14.png'
 import produto15 from '../assets/produto15.png'
 import produto16 from '../assets/produto16.png'
 
-
 export const db = [
   {
     id: 1,
@@ -34,28 +33,28 @@ export const db = [
   {
     id: 3,
     url: produto03,
-    name: "Luke Skywalker",
+    name: "R2-D2",
     price: 450,
     portion: "10x R$ 45,00 sem juros"
   },
   {
     id: 4,
     url: produto04,
-    name: "Darth Vader",
+    name: "Boba Fett",
     price: 350,
     portion: "10x R$ 35,00 sem juros"
   },
   {
     id: 5,
     url: produto05,
-    name: "R2-D2",
+    name: "Princesa Leia",
     price: 250,
     portion: "10x R$ 25,00 sem juros"
   },
   {
     id: 6,
     url: produto06,
-    name: "Boba Fett",
+    name: "Luke Skywalker",
     price: 350,
     portion: "10x R$ 35,00 sem juros"
   },
@@ -69,21 +68,21 @@ export const db = [
   {
     id: 8,
     url: produto08,
-    name: "Princesa Leia",
+    name: "Stormtrooper",
     price: 290,
     portion: "10x R$ 29,00 sem juros"
   },
   {
     id: 9,
     url: produto09,
-    name: "Stormtrooper",
+    name: "Darth Vader",
     price: 350,
     portion: "10x R$ 35,00 sem juros"
   },
   {
     id: 10,
     url: produto10,
-    name: "Boba Fett",
+    name: "EP8 Force / R2-D2",
     price: 380,
     portion: "10x R$ 38,00 sem juros"
   },
@@ -104,20 +103,27 @@ export const db = [
   {
     id: 13,
     url: produto13,
-    name: "EP8 Force / R2-D2",
+    name: "Boba Fett",
     price: 380,
     portion: "10x R$ 38,00 sem juros"
   },
   {
     id: 14,
     url: produto14,
-    name: "Yoda",
+    name: "Luke Skywalker",
     price: 389,
     portion: "10x R$ 38,90 sem juros"
   },
   {
     id: 15,
     url: produto15,
+    name: "Yoda",
+    price: 449,
+    portion: "10x R$ 44,90 sem juros"
+  },
+  {
+    id: 16,
+    url: produto16,
     name: "Chewbacca",
     price: 449,
     portion: "10x R$ 44,90 sem juros"
