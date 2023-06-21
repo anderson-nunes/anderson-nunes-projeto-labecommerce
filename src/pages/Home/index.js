@@ -6,19 +6,41 @@ import { ProductContext } from '../../hooks/useProductContext'
 import { useContext } from 'react'
 import { Banner } from '../../components/Banner'
 import { Carousel } from '../../components/Carousel'
+import { SearchValue } from '../../components/Search'
 
 export const Home = () => {
 
   const { products, handleName, addProductsCart } = useContext(ProductContext)
+
+  //FILTRANDO POR VALOR USANDO PROPS
+
+  const [valueMin, setValueMin] = useState(0)
+  const [valueMax, setValueMax] = useState(0)
+
+  const handleValue = (item) => {
+
+    if (!valueMin && !valueMax) {
+      return products
+    }
+    return item.price >= valueMin && item.price <= valueMax
+  }
 
   return (
     <>
       <Navbar />
       <Banner />
       <Carousel />
+      <SearchValue
+        handleValue={handleValue}
+        valueMin={valueMin}
+        valueMax={valueMax}
+        setValueMin={setValueMin}
+        setValueMax={setValueMax}
+      />
       <S.HomeContainer>
         {products
           .filter(handleName)
+          .filter(handleValue)
           .map((product, index) => (
             <Card
               key={index}
