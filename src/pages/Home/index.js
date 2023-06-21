@@ -3,10 +3,10 @@ import * as S from './styles'
 import { Card } from '../../components/Card'
 import { Navbar } from '../../components/Navbar'
 import { ProductContext } from '../../hooks/useProductContext'
-import { useContext } from 'react'
+import { useState, useContext } from 'react'
 import { Banner } from '../../components/Banner'
-import { Carousel } from '../../components/Carousel'
 import { SearchValue } from '../../components/Search'
+import { Carousel } from '../../components/Carousel'
 
 export const Home = () => {
 

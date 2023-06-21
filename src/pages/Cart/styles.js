@@ -33,14 +33,14 @@ export const CartFigure = styled.div`
     padding: 20px;
     background: #f0f0f0;
     object-fit: contain;
+    max-width: none;
   }
-
 `;
 
 export const CartText = styled.div`
     /* width: 100%; */
     display: grid;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(5, 180px);
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -104,7 +104,7 @@ export const ContainerCheckout = styled.div`
   box-shadow: 0 2px 7px #dfdfdf;
   background: #fafafa;
   width: 550px;
-  height: 700px;
+  height: 750px;
   padding: 2rem;
   position: absolute;
   right: 80px;

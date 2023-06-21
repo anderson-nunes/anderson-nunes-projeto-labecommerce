@@ -23,7 +23,7 @@ export const Card = ({ item, addItem }) => {
       </span>
       <button
         onClick={() => addProductsCart(item)}>
-        <FiShoppingCart />
+        {/* <FiShoppingCart /> */}
         adicionar
       </button>
     </S.CardFigure>

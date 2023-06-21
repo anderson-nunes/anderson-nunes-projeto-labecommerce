@@ -8,7 +8,7 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 9.4rem 0 2rem 0;
+  margin: 9.4rem 0 0 0;
 }
 
 section h2 {
@@ -98,10 +98,15 @@ section .star.star-8 {
 
 @media (max-width: 940px) {
   section h2 {
-    color: transparent;
-    font-weight: 300;
-    font-size: 7em;
-    -webkit-text-stroke: 2px #cfa031;
-    text-transform: uppercase;
+    font-size: 6em;
+  }
+}
+
+@media (max-width: 900px) {
+  section {
+    height: 25vh;
+  }
+  section h2 {
+    font-size: 3em;
   }
 }

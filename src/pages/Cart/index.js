@@ -8,7 +8,6 @@ import { useContext } from 'react';
 
 export const Cart = () => {
 
-
   const {
     productsAdded,
     removeProductsById,
@@ -41,7 +40,6 @@ export const Cart = () => {
                 </S.ContainerQuantitie>
               </S.CartText>
               <S.ContainerBtn>
-                {/* <p>Total:</p> */}
                 <FiX onClick={() => removeProductsById(item.id)} />
               </S.ContainerBtn>
             </S.CartFigure>
