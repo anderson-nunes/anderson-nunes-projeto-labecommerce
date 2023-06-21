@@ -114,7 +114,6 @@ p {
 }
 
 input {
-
   width: 60%;
   padding:8px;
   border-radius: 20px;
@@ -131,8 +130,18 @@ svg {
 }
 
 @media (max-width: 930px){
-  display:none ;
+  svg {
+  margin-right: 2rem;
+  color: #cfa031;
+  font-size: 30px;
+  cursor: pointer;
+  }
+
+  p, input{
+  display: none;
+  }
 }
+
 `
 
 export const FilterValue = styled.div`

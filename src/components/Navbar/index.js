@@ -11,7 +11,6 @@ export const Navbar = () => {
       <Link to="/">
         <img src={logoStar} alt="" />
       </Link>
-
       <Burger />
     </S.NavbarContainer>
   );

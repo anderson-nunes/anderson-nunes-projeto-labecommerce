@@ -4,10 +4,9 @@ export const FilterValue = styled.div`
   width: 100%;
   height: 50px;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 0 17rem;
 
   p{
   color: black;
@@ -23,4 +22,10 @@ export const FilterValue = styled.div`
   margin-right: 3px;
   background-color: #fafafa;
   }
+
+  @media (max-width: 930px){
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 `
