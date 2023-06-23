@@ -1,7 +1,19 @@
 import React from 'react'
 
+import * as S from './styles'
+
 export const Footer = () => {
   return (
-    <div>Footer</div>
+    <S.ContainerFooter>
+      <ul>
+        <li>Sobre</li>
+        <li>Preços</li>
+        <li>Termos de uso</li>
+        <li>Política de privacidade</li>
+        <li>Redes socias</li>
+        <li>Contate-nos</li>
+      </ul>
+      <address>&copy; Feito em 2023, por Anderson Ribeiro Nunes</address>
+    </S.ContainerFooter>
   )
 }
