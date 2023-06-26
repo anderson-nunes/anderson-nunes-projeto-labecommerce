@@ -8,6 +8,10 @@ import { useContext } from 'react';
 
 export const Cart = () => {
 
+  const handleCheckout = () => {
+    alert(`Compra finalizada com sucesso`)
+  }
+
   const {
     productsAdded,
     removeProductsById,
@@ -59,17 +63,29 @@ export const Cart = () => {
             </div>
             <div>
               <p>Nome no cartão</p>
-              <input type="text" placeholder='Digite o nome do cartão' />
+              <input
+                required
+                type="text"
+                placeholder='Digite o nome do cartão' />
             </div>
             <div>
               <p>Número do seu cartão</p>
-              <input type="number" placeholder='0000 0000 0000 0000' />
+              <input
+                required
+                type="number"
+                placeholder='0000 0000 0000 0000' />
             </div>
             <p>Data de validade</p>
             <S.ContainerCredit>
-              <input type="number" placeholder='00' />
-              <input type="number" placeholder='2023' />
-              <input type="number" placeholder='CVV' />
+              <input
+                type="number"
+                placeholder='00' />
+              <input
+                type="number"
+                placeholder='2023' />
+              <input
+                type="number"
+                placeholder='CVV' />
             </S.ContainerCredit>
           </div>
           <S.Total>
@@ -77,7 +93,7 @@ export const Cart = () => {
               { style: 'currency', currency: 'BRL' }
             )}</span>
           </S.Total>
-          <S.BtnAdded>
+          <S.BtnAdded onClick={handleCheckout}>
             Comprar
           </S.BtnAdded>
         </S.ContainerCheckout>

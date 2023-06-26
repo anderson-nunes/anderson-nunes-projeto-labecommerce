@@ -8,6 +8,11 @@ export const CardFigure = styled.div`
     box-shadow: 0 2px 7px #dfdfdf;
     background: #fafafa;
     text-align: end;
+    transition: box-shadow .2s;
+
+    :hover {
+    box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 
   img {
     display: flex;

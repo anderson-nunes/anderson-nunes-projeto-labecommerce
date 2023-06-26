@@ -8,6 +8,7 @@ export const CartContainer = styled.div`
   align-items: center;
   margin: 12rem 0;
   position: absolute;
+  flex-wrap: wrap;
   
   p{
   margin: 0.75rem;
@@ -81,17 +82,22 @@ export const ContainerBtn = styled.div`
 
 export const BtnAdded = styled.div`
   width: 100%;
-  padding: 10px;
+  padding: 8px;
   background-color: #43B02A;
   text-align: center;
   color: #fff;
   border: none;
   outline: 0;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 22px;
   font-weight: 500;
   border-radius: 15px;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
+  transition: all .2s ease-out;
+
+  :hover {
+  background: #86d700;
+  }
 `
 
 export const ContainerCheckout = styled.div`
@@ -117,7 +123,8 @@ export const ContainerCheckout = styled.div`
   }
 
   h1 {
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
   }
 `
 
@@ -133,6 +140,7 @@ export const ContainerCredit = styled.div`
 `
 
 export const Total = styled.div`
-  font-size: 20px;
-  margin-top: 2rem;
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 1rem;
 `
