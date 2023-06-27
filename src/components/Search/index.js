@@ -1,7 +1,7 @@
 import React from 'react'
 import * as S from './styles'
 
-export const SearchValue = ({ handleValue, valueMin, valueMax, setValueMin, setValueMax, order, setOrder }) => {
+export const SearchValue = ({ valueMin, valueMax, setValueMin, setValueMax, order, setOrder }) => {
 
   return (
 
