@@ -6,10 +6,17 @@ import { Link } from 'react-router-dom';
 
 export const Navbar = () => {
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }
+
   return (
     <S.NavbarContainer>
       <Link to="/">
-        <img src={logoStar} alt="" />
+        <img onClick={scrollToTop} src={logoStar} alt="" />
       </Link>
       <Burger />
     </S.NavbarContainer>

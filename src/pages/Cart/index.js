@@ -1,16 +1,22 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FiX } from 'react-icons/fi';
 import * as S from './styles';
 import { Navbar } from '../../components/Navbar';
 import { ProductContext } from '../../hooks/useProductContext'
 import { useContext } from 'react';
+import { useForm } from 'react-hook-form'
+import { yupResolver } from '@hookform/resolvers/yup'
 
+import { object, string } from 'yup'
+
+const schema = object({
+  name: string().required('Campo obrigatório').min(3, 'Você precisa inserir pelo menos 3 caracteres'),
+  cardNumber: string().required('Campo obrigatório').min(16, 'Seu cartão precisa ter 16 números'), validityDay: string().required(),
+  validityYear: string().required(),
+  validityNumber: string().required(),
+})
 
 export const Cart = () => {
-
-  const handleCheckout = () => {
-    alert(`Compra finalizada com sucesso`)
-  }
 
   const {
     productsAdded,
@@ -18,6 +24,15 @@ export const Cart = () => {
     increaseAmount,
     decreaseAmount,
     total } = useContext(ProductContext)
+
+  const {
+    register,
+    handleSubmit: onSubmit,
+    watch, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
+
+  const handleSubmit = () => {
+    alert('Compras realizadas com sucesso')
+  }
 
   return (
     <>
@@ -50,59 +65,80 @@ export const Cart = () => {
           ))}
         </div>
         <S.ContainerCheckout>
-          <div>
-            <h1>Pagamento</h1>
-          </div>
-          <div>
-            <p>Método de pagamento</p>
+          <form onSubmit={onSubmit(handleSubmit)}>
             <div>
-              <input type="radio" />Crédito
+              <h1>Pagamento</h1>
             </div>
             <div>
-              <input type="radio" />Débito
+              <p>Método de pagamento</p>
+              <div>
+                <input
+                  type="radio"
+                  name='opcao'
+                />Crédito
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  name='opcao'
+                />Débito
+              </div>
+              <div>
+                <p>Nome no cartão</p>
+                <input
+                  type='text'
+                  placeholder='Digite o nome do cartão'
+                  id='name'
+                  {...register('name')}
+                />
+                <span>{errors?.name?.message}</span>
+              </div>
+              <div>
+                <p>Número do seu cartão</p>
+                <input
+                  type="number"
+                  placeholder='0000 0000 0000 0000'
+                  id='cardNumber'
+                  {...register('cardNumber')}
+                />
+                <span>{errors?.cardNumber?.message}</span>
+              </div>
+              <p>Data de validade</p>
+              <S.ContainerCredit>
+                <input
+                  type="number"
+                  placeholder='00'
+                  id='validityDay'
+                  {...register('validityDay')}
+                />
+                <input
+                  type="number"
+                  placeholder='2023'
+                  id='validityYear'
+                  {...register('validityYear')}
+                />
+                <input
+                  type="number"
+                  placeholder='CVV'
+                  id='validityNumber'
+                  {...register('validityNumber')}
+                />
+              </S.ContainerCredit>
             </div>
-            <div>
-              <p>Nome no cartão</p>
-              <input
-                required
-                type="text"
-                placeholder='Digite o nome do cartão' />
-            </div>
-            <div>
-              <p>Número do seu cartão</p>
-              <input
-                required
-                type="number"
-                placeholder='0000 0000 0000 0000' />
-            </div>
-            <p>Data de validade</p>
-            <S.ContainerCredit>
-              <input
-                type="number"
-                placeholder='00' />
-              <input
-                type="number"
-                placeholder='2023' />
-              <input
-                type="number"
-                placeholder='CVV' />
-            </S.ContainerCredit>
-          </div>
-          <S.Total>
-            <span>Total: {total.toLocaleString('pt-BR',
-              { style: 'currency', currency: 'BRL' }
-            )}</span>
-          </S.Total>
-          <S.BtnAdded onClick={handleCheckout}>
-            Comprar
-          </S.BtnAdded>
+            <S.Total>
+              <h2>Total: {total.toLocaleString('pt-BR',
+                { style: 'currency', currency: 'BRL' }
+              )}</h2>
+            </S.Total>
+            <button type='submit'
+            >Comprar
+            </button>
+          </form>
         </S.ContainerCheckout>
       </S.CartContainer>
     </>
-
   );
 };
-
 
 
 

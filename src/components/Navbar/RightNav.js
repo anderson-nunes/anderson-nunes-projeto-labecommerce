@@ -10,14 +10,17 @@ export const RightNav = ({ open }) => {
 
   const { searchProducts, setSearchProducts, productsAdded } = useContext(ProductContext)
 
-
   return (
     <>
       <S.Ul open={open}>
-        <li>Brinquedos</li>
+        <li>
+          <a href="#brinquedos">Brinquedos</a>
+        </li>
         <li>Lançamentos</li>
         <li>Promoções</li>
-        <li>Contato</li>
+        <li>
+          <a href="#contatos">Contato</a>
+        </li>
       </S.Ul>
       <S.Search>
         <p>Busca</p>

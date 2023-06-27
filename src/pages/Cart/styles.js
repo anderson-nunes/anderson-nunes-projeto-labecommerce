@@ -11,7 +11,7 @@ export const CartContainer = styled.div`
   flex-wrap: wrap;
   
   p{
-  margin: 0.75rem;
+  margin: 0.50rem;
   font-size: 18px;
   }
 `
@@ -39,7 +39,6 @@ export const CartFigure = styled.div`
 `;
 
 export const CartText = styled.div`
-    /* width: 100%; */
     display: grid;
     grid-template-columns: repeat(5, 180px);
     justify-content: center;
@@ -80,7 +79,33 @@ export const ContainerBtn = styled.div`
     }
 `
 
-export const BtnAdded = styled.div`
+export const ContainerCheckout = styled.div`
+  
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  background: #fafafa;
+  width: 550px;
+  height: auto;
+  padding: 2rem;
+  position: absolute;
+  right: 80px;
+  top: 30px;
+
+  form {
+  width: 100%;
+  }
+
+  input {
+  margin: 1rem;
+  padding: 10px;
+  border: 10px;
+  }
+
+  button {
   width: 100%;
   padding: 8px;
   background-color: #43B02A;
@@ -94,53 +119,32 @@ export const BtnAdded = styled.div`
   border-radius: 15px;
   margin-top: 1.5rem;
   transition: all .2s ease-out;
+}
 
-  :hover {
+  button:hover {
   background: #86d700;
-  }
-`
-
-export const ContainerCheckout = styled.div`
-  
-  display: flex;
-  align-items: start;
-  justify-content: space-between;
-  flex-direction: column;
-  position: relative;
-  box-shadow: 0 2px 7px #dfdfdf;
-  background: #fafafa;
-  width: 550px;
-  height: 750px;
-  padding: 2rem;
-  position: absolute;
-  right: 80px;
-  top: 30px;
-
-  input {
-  margin: 1rem;
-  padding: 10px;
-  border: 10px;
   }
 
   h1 {
   font-size: 2rem;
   font-weight: 700;
   }
-`
 
-export const ContainerCredit = styled.div`
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  input {
-  width: 80px;
+  span {
+    display: flex;
+    margin-left: 0.5rem;
+    color: red;
   }
 `
 
+export const ContainerCredit = styled.div`
+
+  input {
+  width: 80px;
+  }`
+
 export const Total = styled.div`
-  font-size: 26px;
+  font-size: 28px;
   font-weight: 700;
   margin-top: 1rem;
 `

@@ -11,6 +11,10 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-family:fantasy;
   }
+
+  html {
+  scroll-behavior: smooth;
+}
 `
 
 function App() {

@@ -5,7 +5,6 @@ export const ContainerFooter = styled.div`
   width: 100%;
   height: 300px;
   background-color: #000200;
-  /* flex-wrap: wrap; */
 
   ul {
   display: flex;

@@ -5,7 +5,7 @@ import * as S from './styles'
 export const Footer = () => {
   return (
     <S.ContainerFooter>
-      <ul>
+      <ul id='contatos'>
         <li>Sobre</li>
         <li>Preços</li>
         <li>Termos de uso</li>
