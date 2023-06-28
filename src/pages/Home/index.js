@@ -48,10 +48,20 @@ export const Home = () => {
           .filter(handleValue)
           .sort((a, b) => {
             if (order === 'Crescente') {
-              return a.name.localeCompare(b.name)
+              if (a.price > b.price) {
+                return 1
+              }
+              if (a.price < b.price) {
+                return -1
+              }
+              return 0
             } else if (order === 'Decrescente') {
-              return b.name.localeCompare(a.name)
-            } else {
+              if (a.price > b.price) {
+                return -1
+              }
+              if (a.price < b.price) {
+                return 1
+              }
               return 0
             }
           })

@@ -56,7 +56,7 @@ export const Cart = () => {
                 </p>
                 <p>{item.portion}</p>
                 <S.ContainerQuantitie>
-                  <span>Quantidade:{item.amount}</span>
+                  <span>Quantidade: {item.amount}</span>
                   <button onClick={() => decreaseAmount(item.id)}>-</button>
                   <button onClick={() => increaseAmount(item.id)}>+</button>
                 </S.ContainerQuantitie>
