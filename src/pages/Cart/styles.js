@@ -5,30 +5,34 @@ export const CartContainer = styled.div`
   height: auto;
   display: flex;
   justify-content: start;
-  align-items: center;
-  margin: 12rem 0;
-  position: absolute;
-  flex-wrap: wrap;
+  margin-top: 150px;
   
-  p{
-  margin: 0.50rem;
-  font-size: 18px;
+  p {
+    margin: 0.50rem;
+    font-size: 18px;
+  }
+
+  @media only screen and (max-width: 1024px) {
+    flex-direction: column;
   }
 `
 
+export const CartProductList = styled.div`
+  flex: 2;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem 1rem;
+`
+
 export const CartFigure = styled.div`
-   
-    width: 1100px;
-    display: flex;
-    position: relative;
-    box-shadow: 0 2px 7px #dfdfdf;
-    background: #fafafa;
-    margin: 2rem 8rem;
+  width: 100%;
+  display: flex;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  background: #fafafa;
+  margin-bottom: 2rem;
 
   img {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 200px;
     height: 250px;
     padding: 20px;
@@ -40,47 +44,55 @@ export const CartFigure = styled.div`
 
 export const CartText = styled.div`
     display: grid;
-    grid-template-columns: repeat(5, 180px);
+    grid-template-columns: repeat(5, 1fr);
     justify-content: center;
     align-items: center;
     text-align: center;
     margin-left: 1rem;
 
-    button{
-    color: rgb(183, 183, 183);
-    border: 0px;
-    background-color: rgb(0, 0, 0);
-    width: 25px;
-    height: 25px;
-    margin-left: 1rem;
-    font-size: 16px;
+    button {
+      color: rgb(183, 183, 183);
+      border: 0px;
+      background-color: rgb(0, 0, 0);
+      width: 25px;
+      height: 25px;
+      margin-left: 1rem;
+      font-size: 16px;
     }
+
+@media (max-width: 600px){
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
 `
 
 export const ContainerQuantitie = styled.div`
   width: 100%;
-  margin-left: 2rem;
 `
 
 export const ContainerBtn = styled.div`  
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 20%;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 
-    svg {
+  svg {
     position: absolute;
     font-size: 26px;
     cursor: pointer;
     right: 6px;
     top: 8px;
-    }
+  }
 `
 
 export const ContainerCheckout = styled.div`
-  
+  flex: 1;
+  width: 100%;
+  height: 800px;
+  padding: 4rem;
+  margin-top: 2rem;
   display: flex;
   align-items: start;
   justify-content: space-between;
@@ -88,46 +100,42 @@ export const ContainerCheckout = styled.div`
   position: relative;
   box-shadow: 0 2px 7px #dfdfdf;
   background: #fafafa;
-  width: 550px;
-  height: auto;
-  padding: 2rem;
-  position: absolute;
-  right: 80px;
-  top: 30px;
+  margin-right: 0.5rem;
+  margin-left:0.5rem ;
 
   form {
-  width: 100%;
+    width: 100%;
   }
 
   input {
-  margin: 1rem;
-  padding: 10px;
-  border: 10px;
+    margin: 1rem;
+    padding: 10px;
+    border: 10px;
   }
 
   button {
-  width: 100%;
-  padding: 8px;
-  background-color: #43B02A;
-  text-align: center;
-  color: #fff;
-  border: none;
-  outline: 0;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 500;
-  border-radius: 15px;
-  margin-top: 1.5rem;
-  transition: all .2s ease-out;
-}
+    width: 100%;
+    padding: 10px;
+    background-color: #43B02A;
+    text-align: center;
+    color: #fff;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 500;
+    border-radius: 15px;
+    margin-top: 1.5rem;
+    transition: all .2s ease-out;
+  }
 
   button:hover {
-  background: #86d700;
+    background: #86d700;
   }
 
   h1 {
-  font-size: 2rem;
-  font-weight: 700;
+    font-size: 2rem;
+    font-weight: 700;
   }
 
   span {
@@ -138,9 +146,8 @@ export const ContainerCheckout = styled.div`
 `
 
 export const ContainerCredit = styled.div`
-
   input {
-  width: 80px;
+    width: 80px;
   }`
 
 export const Total = styled.div`

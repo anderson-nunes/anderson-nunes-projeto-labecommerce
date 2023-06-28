@@ -10,8 +10,11 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { object, string } from 'yup'
 
 const schema = object({
-  name: string().required('Campo obrigatório').min(3, 'Você precisa inserir pelo menos 3 caracteres'),
-  cardNumber: string().required('Campo obrigatório').min(16, 'Seu cartão precisa ter 16 números'), validityDay: string().required(),
+  name: string().required('Campo obrigatório')
+    .min(3, 'Você precisa inserir pelo menos 3 caracteres'),
+  cardNumber: string().required('Campo obrigatório')
+    .min(16, 'Seu cartão precisa ter 16 números'),
+  validityDay: string().required(),
   validityYear: string().required(),
   validityNumber: string().required(),
 })
@@ -28,7 +31,7 @@ export const Cart = () => {
   const {
     register,
     handleSubmit: onSubmit,
-    watch, formState: { errors } } = useForm({ resolver: yupResolver(schema) })
+    formState: { errors } } = useForm({ resolver: yupResolver(schema) })
 
   const handleSubmit = () => {
     alert('Compras realizadas com sucesso')
@@ -38,7 +41,7 @@ export const Cart = () => {
     <>
       <Navbar />
       <S.CartContainer>
-        <div>
+        <S.CartProductList>
           {productsAdded.map((item) => (
             <S.CartFigure>
               <div>
@@ -63,7 +66,7 @@ export const Cart = () => {
               </S.ContainerBtn>
             </S.CartFigure>
           ))}
-        </div>
+        </S.CartProductList>
         <S.ContainerCheckout>
           <form onSubmit={onSubmit(handleSubmit)}>
             <div>
