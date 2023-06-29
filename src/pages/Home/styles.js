@@ -11,4 +11,8 @@ export const HomeContainer = styled.div`
   margin-top: 1rem;
   margin-bottom: 2rem;
   padding: 0 7rem;
+
+  @media (max-width: 600px){
+  padding: inherit;
+  }
 `;

@@ -13,20 +13,12 @@ export const Home = () => {
 
   const { products, handleName, addProductsCart } = useContext(ProductContext)
 
-  // FILTRANDO POR VALOR USANDO PROPS
-  const [valueMin, setValueMin] = useState(0)
-  const [valueMax, setValueMax] = useState(0)
-
   //FILTRANDO POR ORDEM CRESCENTE E DECRESCENTE
   const [order, setOrder] = useState('')
 
-  const handleValue = (item) => {
-
-    if (!valueMin && !valueMax) {
-      return products
-    }
-    return item.price >= valueMin && item.price <= valueMax
-  }
+  // FILTRANDO POR VALOR USANDO PROPS
+  const [valueMin, setValueMin] = useState('')
+  const [valueMax, setValueMax] = useState('')
 
   return (
     <>
@@ -34,18 +26,22 @@ export const Home = () => {
       <Banner />
       <Carousel />
       <SearchValue
-        handleValue={handleValue}
-        valueMin={valueMin}
-        valueMax={valueMax}
         setValueMin={setValueMin}
         setValueMax={setValueMax}
+        valueMin={valueMin}
+        valueMax={valueMax}
         order={order}
         setOrder={setOrder}
       />
       <S.HomeContainer>
         {products
           .filter(handleName)
-          .filter(handleValue)
+          .filter((item) => {
+            if (valueMin && valueMax) {
+              return item.price >= valueMin && item.price <= valueMax
+            }
+            return true
+          })
           .sort((a, b) => {
             if (order === 'Crescente') {
               if (a.price > b.price) {

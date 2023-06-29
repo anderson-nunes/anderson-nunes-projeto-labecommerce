@@ -10,14 +10,14 @@ export const SearchValue = ({ valueMin, valueMax, setValueMin, setValueMax, orde
       <input
         type="number"
         value={valueMin}
-        onChange={(e) => setValueMin(e.target.value)}
+        onChange={(e) => setValueMin(Number(e.target.value))}
       />
 
       <p>Máximo:</p>
       <input
         type="number"
         value={valueMax}
-        onChange={(e) => setValueMax(e.target.value)}
+        onChange={(e) => setValueMax(Number(e.target.value))}
       />
 
       <select
