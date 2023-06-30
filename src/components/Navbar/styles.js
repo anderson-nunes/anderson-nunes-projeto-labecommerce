@@ -15,7 +15,6 @@ export const NavbarContainer = styled.nav`
   left: 0;
 
 img {
-  margin-left: 2rem;
   width: 200px;
   }
 `;
