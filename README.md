@@ -1,6 +1,23 @@
-# projeto-frontendreact
+## Índice
 
-Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar a estrutura do que consideramos a estrutura do React. O objetivo é que funcione como o front-end de um E-Commerce
+- [Link de Acesso](#Link-de-Acesso)
+- [Resumo do Projeto](#Resumo-do-projeto)
+- [Definição do Produto](#Definição-do-Projeto)
+- [Lista de Requisitos](#Lista-de-Requisitos)
+- [Instalação](#Instalação)
+- [Iniciando](#Iniciando)
+- [Tecnologias e Ferramentas Utilizadas](#Tecnologias-e-Ferramentas-Utilizadas)
+- [Lista de Requisitos do Projeto](#Lista-de-Requisitos-do-Projeto)
+- [Desktop](#Desktop)
+- [Mobile](#Mobile)
+
+## Link de Acesso
+
+Link surge: http://anderson-ribeiro.surge.sh/
+
+## Resumo do Projeto
+
+O Labecommerce é um e-commerce com recursos avançados que permite aos usuários ordenar, pesquisar e filtrar produtos de forma intuitiva. Ele também oferece um carrinho de compras completo, com resumo da compra, opção de limpar o carrinho e ajustar as quantidades. Além disso, o Labecommerce possui organização em páginas e a capacidade de ocultar o carrinho para visualizar mais produtos.
 
 - JSX
 - Componentes
@@ -11,58 +28,59 @@ Esse é o projeto de introdução aos fundamentos do React. Aqui, vamos praticar
 - Renderização condicional
 - localStorage
 
-## Instruções
+## Instalação
 
-O Astrodev deixou um testamento e essa foi a herança deixada pra vocês:
+- Node.js
+- npm
 
-```
-Estudantes do meu coração,
-Estou querendo montar um e-commerce de itens espaciais e vocês serão responsáveis por essa construção.
-Pretendo montar diferentes linhas de produtos.
+Para instalar as dependências no diretório do seu projeto, execute o seguinte comando:
 
-As possíveis linhas de produto são:
-- Satélites antigos;
-- Roupas espaciais;
-- Camisetas com estampas divertidas relacionadas ao espaço;
-- Viagens espaciais;
-- Meteoritos / aerolitos como pedras preciosas;
-- Brinquedos e produtos infantis temáticos;
-- Naves / Foguetes / Ônibus espaciais;
+- npm install
 
-Escolham uma linha dentre essas, e criem um e-commerce de acordo com a lista de requisitos.
+## Iniciando
 
+Para iniciar o aplicativo, execute o seguinte comando:
 
-Att.
-```
+- npm run start
 
-# Requisitos
+## Tecnologias e Ferramentas Utilizadas
 
-O projeto consistirá em 3 grandes partes:
+Este site foi construído com as seguintes tecnologias:
 
-1. Home
-   - Mostrando todos os produtos
-   - Deve haver alguma forma de ordenar os produtos por ordem crescente ou decrescente de preço (pode ser na home em si ou junto dos filtros)
-   - Produtos:
-     - Devem ter um botão que permita adicioná-los ao carrinho
-     - Devem exibir o nome, preço e imagem em um card
-2. Carrinho
-   - Mostrar todos os produtos e quantidades adicionadas
-   - Capacidade de remover itens do carrinho
-   - Mostrar o valor total do carrinho
-3. Filtro
-   - Por valor mínimo e máximo
-   - Por nome do produto
+- React
+- React-Hooks
+- React-Router-Dom
+- JavaScript
+- Styled-Components
 
-Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma lista contendo todos):
+## Definição do Produto
 
-```jsx
-{
-	id: 1,
-	name: "Foguete da Missão Apollo 11",
-	value: 10000.0,
-	imageUrl: "https://picsum.photos/200/200",
-}
-```
+- O Labecommerce oferece diversas funcionalidades aos usuários:
+
+- Ordenação dos produtos por preço em duas opções:
+
+- Ordem crescente
+- Ordem decrescente
+
+- Pesquisa de produtos por nome, considerando letras minúsculas ou maiúsculas.
+
+- Filtragem por valores com dois tipos de filtros:
+
+- Valor mínimo
+- Valor máximo
+
+- Todos os filtros podem ser usados simultaneamente.
+
+- No carrinho, é possível ver um resumo da compra, incluindo a quantidade de itens e o valor total.
+- O usuário pode limpar o carrinho com um único clique no ícone do "X". Além disso, no carrinho,  
+  existem botões que permitem aumentar ou diminuir a quantidade de um item.
+
+- Ao lado do carrinho existe um campo com formulário com validações.
+
+- Os itens do carrinho permanecem no carrinho mesmo após a atualização da página.
+
+- A página é um site responsivo que se adapta a diferentes dispositivos, oferecendo uma experiência
+  de visualização otimizada em desktops, tablets e smartphones. Ela foi projetada para fornecer uma interface amigável e agradável aos usuários, independentemente do dispositivo utilizado.
 
 ### Lista de Requisitos
 
@@ -84,37 +102,28 @@ Exemplo de estruturação de **UM** produto (Lembrem-se que vocês terão uma li
   - [ ] O usuário deve ser capaz de adicionar filtros, busca e ordenação simultaneamente
   - [ ] O usuário deve ser capaz de retornar à visualização sem filtros
 
-###
+## Desktop
 
-O layout da página é escolha de vocês! O exemplo abaixo é só uma implementação bemmm simples das funcionalidades, não se atenham a ele.
+![desktop-1](./src/prints/print01.png)
+![desktop-2](./src/prints/print02.png)
+![desktop-3](./src/prints/print03.png)
+![desktop-4](./src/prints/print04.png)
+![desktop-5](./src/prints/print05.png)
+![desktop-6](./src/prints/print06.png)
+![desktop-7](./src/prints/print07.png)
+![desktop-8](./src/prints/print08.png)
 
-http://fluttering-coast.surge.sh/
+## Mobile
 
-https://user-images.githubusercontent.com/11279432/197185533-14582ca3-9eb0-4a5a-b57c-b94913ff2dd6.mp4
+![mobile-1](./src/prints/mobile01.png)
+![mobile-2](./src/prints/mobile02.png)
+![mobile-3](./src/prints/mobile03.png)
+![mobile-4](./src/prints/mobile04.png)
+![mobile-5](./src/prints/mobile05.png)
+![mobile-6](./src/prints/mobile06.png)
 
-### Conseguiu terminar? Aqui temos alguns **desafios**
+## Desenvolvedor
 
-1. Salvar e Recuperar conteúdo do carrinho usando o `LocalStorage`;
-2. Dediquem um tempo para melhorar o layout e a usabilidade do seu site! Se baseiem em outros e-commerces que vocês gostam para chegar em um resultado mais próximo do padrão de design visto no mercado;
-3. Se TODO O RESTO DO SITE e os dois desafios anteriores estiverem funcionando, pensem: qual outra funcionalidade está faltando? Decidam o que vocês concordam que poderia ser uma boa adição à loja virtual (pode ser qualquer funcionalidade, desde que vocês consigam implementá-la). Todas as funcionalidades extras implementadas devem ser listadas e explicadas no readme do projeto para que possam ser avaliadas.
+- Projeto desenvolvido por:
 
-### Instruções para preparar o seu repositório
-
-- Faça o fork desse repositório e realize o clone da sua cópia `seu-nome-de-usuario/projeto-lista-intro-javascript`.
-   <details>
-   <summary>Quer uma dica?</summary>
-   <img src="https://firebasestorage.googleapis.com/v0/b/assets-conteudo.appspot.com/o/gerais%2Ffork.png?alt=media&token=7030e997-246a-41fe-a75f-2a2ced61e54d" alt="Como adicionar o projeto no repositório"/>
-   </details>
-- Crie os arquivos do projeto dentro deste repo;
-- **Lembre-se de abrir os PRs para seu próprio repositório.**
-- Para isso, você precisará fazer o projeto utilizando **branches**. Não faça as alterações direto na branch `main`!
-
-### Instruções de entrega
-
-![image](https://user-images.githubusercontent.com/71137294/227538428-52271ed2-df78-4500-b286-25f03aa7bf2e.png)
-
-1.  [Crie o surge](https://labenu.notion.site/Deploy-de-front-React-com-Surge-f902a03ec1d247dc9af9aee5a1469d96) do seu projeto e pegue o link da publicação(deploy);
-2.  Adicione o link do surge no readme do seu projeto;
-3.  Tire print das páginas do seu projeto e cole no readme;
-4.  Abra um novo Pull Request (PR) com a frase **PR para correção**. Caso não saiba como fazê-lo, assista a esse [vídeo](https://www.canva.com/design/DAFY4nS5W2c/t92uFMR61YtmA7bCwj2S1Q/watch).
-5.  Envie o link do seu PR e do surge no [formulário de entrega](https://forms.gle/S9XChPZravP3WdxL6).
+<strong>Andrson Ribeiro Nunes</strong>
