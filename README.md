@@ -53,6 +53,10 @@ Este site foi construído com as seguintes tecnologias:
 - JavaScript
 - Styled-Components
 
+<br>
+    <img src="https://skillicons.dev/icons?i=react,js,git,github,figma" style="height: 30px;"/>
+</p>
+
 ## Definição do Produto
 
 - O Labecommerce oferece diversas funcionalidades aos usuários:
