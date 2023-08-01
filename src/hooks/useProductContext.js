@@ -22,14 +22,40 @@ export const ProductProvider = ({ children }) => {
 
   const [productsAdded, setProductsAdded] = useState(JSON.parse(initialProductsAdded) || [])
 
+  const [newProductsAdded, setNewProductsAdded] = useState(JSON.parse(initialProductsAdded) || [])
+
+
   const [total, setTotal] = useState(0)
+
+
+
+  // const addProductsCart = (product) => {
+
+  //   const newProdutcsAdded = productsAdded.concat({ ...product, amount: 1 })
+
+  //   setProductsAdded(newProdutcsAdded)
+  // }
+
+
 
   const addProductsCart = (product) => {
 
     const newProdutcsAdded = productsAdded.concat({ ...product, amount: 1 })
 
-    setProductsAdded(newProdutcsAdded)
+    const isProductAdded = productsAdded.some((item) => item.id === product.id)
+
+    const isNewProductAdded = newProductsAdded.some((item) => item.id === product.id)
+
+    if (isProductAdded || isNewProductAdded) {
+
+      return
+
+    } else {
+
+      setProductsAdded(newProdutcsAdded)
+    }
   }
+
 
   const increaseAmount = (id) => {
 
